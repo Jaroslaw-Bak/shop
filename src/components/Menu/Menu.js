@@ -1,22 +1,25 @@
 import styles from './Menu.module.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const Menu = (props) => {
 
-    const [category, setCategory] = useState('zadna');
+    const [category, setCategory] = useState('Clothes');
     
-    props.categoryHandler(category) 
-    
-
+    useEffect(() => {
+        props.categoryHandler(category) 
+    },[category])
 
     return (
-        <ul className={styles.menu}>
-            <li className={styles.item} onClick={() => {setCategory('clothes')}} >Clothes</li>
-            <li className={styles.item} onClick={() => {setCategory('electronics')}}>Electronics</li>
-            <li className={styles.item} >Furniture</li>
-            <li className={styles.item} >Shoes</li>
-            <li className={styles.item} >Others</li>
-        </ul>
+        <Link to="/products">
+            <ul className={styles.menu}>
+                <li className={styles.item} onClick={() => {setCategory('Clothes')}} >Clothes</li>
+                <li className={styles.item} onClick={() => {setCategory('Electronics')}}>Electronics</li>
+                <li className={styles.item} onClick={() => {setCategory('Furniture')}}>Furniture</li>
+                <li className={styles.item} onClick={() => {setCategory('Shoes')}}>Shoes</li>
+                <li className={styles.item} onClick={() => {setCategory('Others')}}>Others</li>
+            </ul>
+        </Link>
     )
 }
 
