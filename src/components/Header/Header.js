@@ -1,25 +1,28 @@
 import styles from './Header.module.css'
 import { Link } from 'react-router-dom'
-import logo from '../../assets/shop_logo.png'
-import basket from '../../assets/basket.png'
-import profile from '../../assets/profile_logo.png'
-import Searchbar from '../Searchbar/Searchbar'
+import Menu from './Menu/Menu'
 
-const Header = () => {
+const Header = (props) => {
     return (
         <>
             <div className={styles.header}>
-                <div className={styles.left}>
-                    <Link to='./'>
-                        <img src={logo} className={styles.logo}></img>     
-                    </Link>
+                <div className={styles.header__infoBar}>      
+                    
                 </div>
-                <div className={styles.right}>
-                    <div className={styles.search}>
-                        <Searchbar />
+                <div className={styles.header__flex}>
+                    <div className={styles.header__logo}>
+                        <Link to='./' style={{textDecoration: 'none'}}>
+                            <p>Logo</p>    
+                        </Link>
                     </div>
-                    <img className={styles.profile} src={profile} alt='profile_logo' />
-                    <img className={styles.basket} src={basket}  alt='basket'/>
+                    <div className={styles.menu}>
+                        <Menu categoryHandler={props.categoryHandler}/>
+                    </div>
+                    <Link to={'/cart'}>                   
+                        <div className={styles.basket}>
+                            koszyczek
+                        </div>
+                    </Link>
                 </div>
             </div>
         </>

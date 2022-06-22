@@ -1,11 +1,18 @@
 .products {
-    margin: 0 5%;
+    
 }
 
 .products__info {
-    padding: 20px 0
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    padding-bottom: px;
+    background-color: #7D83FF;
 }
 .products__items {
+    margin: 0 10%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

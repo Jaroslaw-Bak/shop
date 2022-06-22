@@ -1,9 +1,12 @@
 import styles from './Home.module.css'
+import home from '../../assets/home.jpg'
 
-const Home = (props) => {
+const Home = () => {
     return (
         <div className={styles.home}>
-           dać tu jakąś strone domową
+           <div>
+            Home
+           </div>
         </div>
     )
 }

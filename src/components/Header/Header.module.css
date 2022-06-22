@@ -1,29 +1,14 @@
 .header {
-    display: flex;
     width: 100%;
-    height: 60px;
-    padding-left: 10px;
-    padding-right: 10px;
-    align-items: center;
-    justify-content: space-between;
-    position: sticky;
-    z-index: 1;
+    height: 100px;
 }
-.right {
-    display: flex;
-}
-.logo {
-   width: 50px;
-   height: 50px;
-}
-.profile {
-    width: 20px;
-    height: 20px;
-    padding-left: 10px;
+.header__infoBar {
+    background-color: #7D83FF;
+    height: 35px
 }
 
-.basket {
-    width: 20px;
-    height: 20px;
-    padding-left: 10px;
+.header__flex {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
 }
