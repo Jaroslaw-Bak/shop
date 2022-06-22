@@ -11,9 +11,9 @@ const Cart = () => {
   return (
     <div className={styles.cart}>
         {console.log(cartData)}
-        {cartData.map(product => {
-            <div>{product.id}</div>
-        })}
+        {cartData.map(product => (
+            <div>{product.title}</div>
+        ))}
     </div>
   )
 }
